@@ -4,7 +4,7 @@ Have you ever wanted to feel more special using Void Linux? well here is a comma
 ![example](https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/vfetch_example.png)
 
 ---
-install:
+Install:
 ```sh
 curl -fsSL https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/install.sh | bash
 ```
