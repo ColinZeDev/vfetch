@@ -1,16 +1,27 @@
-# vFETCH -- A fetch command exclusive to Void Linux users
-Have you ever wanted to feel more special using Void Linux? well here is a command just for you!
+# vFETCH
 
-![example](https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/vfetch_example.png)<br>
-(I blurred my IP for safety)
+A fetch utility made exclusively for Void Linux users.
+
+Want something a little more *Void-exclusive*? `vFETCH` gives you a fetch command tailored specifically for Void Linux.
+
+![vfetch_example](https://raw.githubusercontent.com/ColinZeDev/vfetch/main/vfetch_example.png)
 
 ---
-Install:
+
+## Installation
+
+### Quick Install
+
 ```sh
-curl -fsSL https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ColinZeDev/vfetch/main/install.sh | bash
 ```
-If you don't have curl, install it with:
+
+### If `curl` is not installed
+
+Install it using:
+
 ```sh
 sudo xbps-install -S curl
 ```
-**!! this is important cause the install script uses curl !!**
+
+>  The installer requires `curl` to download vFETCH.
