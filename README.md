@@ -2,6 +2,8 @@
 
 A fetch utility made exclusively for Void Linux users.
 
+---
+
 Want something a little more *Void-exclusive*? `vFETCH` gives you a fetch command tailored specifically for Void Linux.
 
 ![vfetch_example](https://raw.githubusercontent.com/ColinZeDev/vfetch/main/vfetch_example.png)
