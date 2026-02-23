@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # vfetch -- a fetch command exclusive to void linux users
 
