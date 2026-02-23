@@ -4,20 +4,29 @@ set -euo pipefail
 INSTALL_PATH="/usr/local/bin/vfetch"
 URL="https://raw.githubusercontent.com/ColinZeDev/vfetch/main/vfetch.sh"
 
-printf "\033[1m\033[38;5;46m=> Installing vFETCH to: $INSTALL_PATH\033[0m"
+GREEN="\033[1;38;5;46m"
+ORANGE="\033[1;38;5;214m"
+RED="\033[1;38;5;160m"
+RESET="\033[0m"
+
+printf "${GREEN}=> Installing vFETCH to: %s${RESET}\n" "$INSTALL_PATH"
 
 if [[ -f "$INSTALL_PATH" ]]; then
-  read -rp "\033[1m\033[38;5;214mvFETCH already exists. Overwrite? [y/N]:\033[0m " answer
+  printf "${ORANGE}vFETCH already exists. Overwrite? [y/N]: ${RESET}"
+  read -r answer
   case "$answer" in
     [yY][eE][sS]|[yY]) ;;
     *)
-      echo "\033[1m\033[38;5;160mInstallation cancelled.\033[0m"
+      printf "${RED}Installation cancelled.${RESET}\n"
       exit 0
       ;;
   esac
 fi
 
-sudo curl -fsSL "$URL" -o "$INSTALL_PATH"
-sudo chmod 755 "$INSTALL_PATH"
+tmp_file="$(mktemp)"
+trap 'rm -f "$tmp_file"' EXIT
 
-printf "\033[1m\033[38;5;46m=> Installation complete!\033[0m"
+curl -fsSL "$URL" -o "$tmp_file"
+sudo install -m 755 "$tmp_file" "$INSTALL_PATH"
+
+printf "${GREEN}=> Installation complete!${RESET}\n"
