@@ -6,5 +6,5 @@ Have you ever wanted to feel more special using Void Linux? well here is a comma
 ---
 install:
 ```sh
-curl -fsSL | bash
+curl -fsSL https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/install.sh | bash
 ```
