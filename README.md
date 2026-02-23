@@ -8,3 +8,8 @@ Install:
 ```sh
 curl -fsSL https://raw.githubusercontent.com/ColinZeDev/vfetch/refs/heads/main/install.sh | bash
 ```
+If you don't have curl, install it with:
+```sh
+sudo xbps-install -S curl
+```
+**!! this is important cause the install script uses curl !!**
