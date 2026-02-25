@@ -22,7 +22,7 @@ full_name="$(getent passwd "$user" | cut -d: -f5 | cut -d, -f1)"
 
 host="$(hostname)"
 
-kernel="$(uname -s) $(uname -r)"
+kernel="$(uname -r)"
 
 uptime_raw="$(uptime -p | sed 's/up //')"
 
