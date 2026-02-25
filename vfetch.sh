@@ -4,6 +4,7 @@
 
 if ! grep -qP '^ID="?void"?' /etc/os-release 2>/dev/null; then
     echo "\033[38;5;196mvfetch is exclusive to Void Linux.\033[0m" >&2
+    rm -f /usr/local/bin/vfetch
     exit 1
 fi
 
@@ -85,7 +86,7 @@ art=(
 info=(
     "${B}${U}${DG}Enter the void${R}${B}${DG}.${R}"
     "$(printf "${L}%-12.9s${R}%s" "OS"       "Void GNU/Linux")"
-    "$(printf "${L}%-12.9s${R}%s" "User"     "${full_name} (${user})")"
+    "$(printf "${L}%-12.9s${R}%s" "User"     "${full_name} (${user_display})")"
     "$(printf "${L}%-12.9s${R}%s" "Hostname" "${host}")"
     "$(printf "${L}%-12.9s${R}%s" "Kernel"   "${kernel}")"
     "$(printf "${L}%-12.9s${R}%s" "Init"     "${init}")"
