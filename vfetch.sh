@@ -19,7 +19,6 @@ D=$'\033[38;5;238m'
 
 user="$(whoami)"
 full_name="$(getent passwd "$user" | cut -d: -f5 | cut -d, -f1)"
-[[ -n "$full_name" ]] && user_display="${full_name} (${user})" || user_display="$user"
 
 host="$(hostname)"
 
@@ -86,7 +85,7 @@ art=(
 info=(
     "${B}${U}${DG}Enter the void${R}${B}${DG}.${R}"
     "$(printf "${L}%-12.9s${R}%s" "OS"       "Void GNU/Linux")"
-    "$(printf "${L}%-12.9s${R}%s" "User"     "${full_name} (${user_display})")"
+    "$(printf "${L}%-12.9s${R}%s" "User"     "${full_name} (${user})")"
     "$(printf "${L}%-12.9s${R}%s" "Hostname" "${host}")"
     "$(printf "${L}%-12.9s${R}%s" "Kernel"   "${kernel}")"
     "$(printf "${L}%-12.9s${R}%s" "Init"     "${init}")"
