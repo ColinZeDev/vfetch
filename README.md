@@ -27,3 +27,5 @@ sudo xbps-install -S curl
 ```
 
 >  The installer requires `curl` to download vFETCH.
+
+> (And yes, the logo is from [pfetch](https://github.com/dylanaraps/pfetch))
